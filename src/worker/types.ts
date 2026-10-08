@@ -2,7 +2,6 @@ export interface Env {
     GithubOwner: string;
     GithubRepo: string;
     GithubPAT: string;
-    DB: D1Database;
-    AI: Ai;
-    ADMIN_PASSWORD: string;
+    /** Shared secret required as `Authorization: Bearer <token>` on POST /upload. */
+    UPLOAD_TOKEN: string;
 }

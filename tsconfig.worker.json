@@ -7,7 +7,7 @@
       "ES2022"
     ],
     "types": [
-      "@cloudflare/workers-types"
+      "@cloudflare/workers-types", "node"
     ],
     "strict": true,
     "skipLibCheck": true,
@@ -15,6 +15,6 @@
     "allowImportingTsExtensions": true
   },
   "include": [
-    "src/worker"
+    "src/worker", "tests"
   ]
 }

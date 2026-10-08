@@ -1,36 +1,13 @@
-// Resource IDs are omitted so Wrangler can provision bindings automatically.
+// Single-user fork: POST /upload requires UPLOAD_TOKEN; images are served
+// publicly and never deleted. Secrets: GithubPAT, GithubOwner, GithubRepo,
+// UPLOAD_TOKEN (set with `wrangler secret put`).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "image",
   "main": "src/worker/index.ts",
   "compatibility_date": "2026-09-01",
   "workers_dev": false,
-  "assets": {
-    "directory": "./dist",
-    "run_worker_first": [
-      "/upload",
-      "/api/*"
-    ]
-  },
-  "placement": {
-    "mode": "smart"
-  },
-  "triggers": {
-    "crons": [
-      "45 3 * * *"
-    ]
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "image-access",
-      "migrations_dir": "migrations"
-    }
-  ],
   "observability": {
     "enabled": false
-  },
-  "ai": {
-    "binding": "AI"
   }
 }

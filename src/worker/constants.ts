@@ -1,8 +1,7 @@
 export const IMAGE_ID_PATTERN = /^[0-9a-z]{32}$/;
-export const IMAGE_PATH_PATTERN = /^[0-9a-z]{32}\.(jpeg|png|webp)$/;
-export const RETENTION_MS = 7 * 24 * 60 * 60 * 1000;
+export const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
 export const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, If-None-Match, X-Terms-Version',
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Access-Control-Allow-Headers': 'If-None-Match',
 };
